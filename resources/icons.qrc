@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/OnDistance.png</file>
+        <file>icons/OnFineCtrls.png</file>
+        <file>icons/OnFlipHView.png</file>
+        <file>icons/OnFlipVView.png</file>
+        <file>icons/OnIsoView.png</file>
+        <file>icons/OnResetGraphScale.png</file>
+        <file>icons/OnResetXScale.png</file>
+        <file>icons/OnResetXYScale.png</file>
+        <file>icons/OnResetYScale.png</file>
+        <file>icons/OnXView.png</file>
+        <file>icons/OnYView.png</file>
+        <file>icons/OnZView.png</file>
+        <file>icons/OnZoomIn.png</file>
+        <file>icons/OnZoomOut.png</file>
+        <file>icons/OnZoomYScale.png</file>
+        <file>icons/QtIcon.png</file>
+        <file>icons/empty.png</file>
+        <file>icons/light.png</file>
+        <file>icons/reset3dscale.png</file>
+    </qresource>
+</RCC>

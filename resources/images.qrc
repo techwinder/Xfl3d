@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/splash.png</file>
+        <file>images/Lorenz.png</file>
+        <file>images/Lorenz_inv.png</file>
+        <file>images/PSO_inv.png</file>
+        <file>images/PSO.png</file>
+        <file>images/quadtex.png</file>
+        <file>images/sizegrip.png</file>
+    </qresource>
+</RCC>
