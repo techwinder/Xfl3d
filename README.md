@@ -62,7 +62,7 @@ Zoom:   mouse wheel, or Alt+ Mouse move vertically or laterally
 
 Rotate: Ctrl or mouse middle button to activate the arcball, then click on the arcball and mouse move
 
-## Keyboar shortcuts
+## Keyboard shortcuts
 R:         Reset the scale
 
 I:         Switch to pseudo-isometric view
