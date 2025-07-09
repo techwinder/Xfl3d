@@ -46,7 +46,7 @@ QByteArray MainFrame::s_Geometry;
 MainFrame::MainFrame(QWidget *parent)
     : QMainWindow(parent)
 {
-    setWindowIcon(QIcon(":/icons/f5.png"));
+    setWindowIcon(QIcon(":/icons/Xfl3d.png"));
 
     setDefaultStaticFonts();
     loadSettings();
@@ -97,9 +97,6 @@ void MainFrame::createMenu()
         QAction *pJuliaQuat= new QAction("Julia quaternions", this);
         pJuliaQuat->setShortcut(QKeySequence(Qt::SHIFT | Qt::Key_F2));
 
-        QAction *pRM   = new QAction("Ray marching", this);
-        pRM->setShortcut(QKeySequence(Qt::CTRL | Qt::Key_F2));
-
         QAction *pShadow   = new QAction("Shadow", this);
         pShadow->setShortcut(Qt::Key_F3);
 
@@ -139,13 +136,11 @@ void MainFrame::createMenu()
         QAction *pFlow      = new QAction("Flow", this);
         pFlow->setShortcut(QKeySequence(Qt::CTRL | Qt::Key_F));
 
-        QAction *pOther      = new QAction("Other", this);
 
         connect(pTestGL,      SIGNAL(triggered(bool)), SLOT(onTestGL()));
         connect(pFractal,     SIGNAL(triggered(bool)), SLOT(onFractal()));
         connect(pNewton,      SIGNAL(triggered(bool)), SLOT(onNewton()));
         connect(pJuliaQuat,   SIGNAL(triggered(bool)), SLOT(onJuliaQuat()));
-        connect(pRM,          SIGNAL(triggered(bool)), SLOT(onRM()));
         connect(pShadow,      SIGNAL(triggered(bool)), SLOT(onShadow()));
         connect(pFlight,      SIGNAL(triggered(bool)), SLOT(onFlight()));
         connect(pHydrogen,    SIGNAL(triggered(bool)), SLOT(onHydrogen()));
@@ -160,13 +155,10 @@ void MainFrame::createMenu()
         connect(pBoidsGPU,    SIGNAL(triggered(bool)), SLOT(onBoidsGPU()));
         connect(pFlow,        SIGNAL(triggered(bool)), SLOT(onFlow()));
 
-        connect(pOther,        SIGNAL(triggered(bool)), SLOT(onOther()));
-
         pViewMenu->addAction(pTestGL);
         pViewMenu->addAction(pFractal);
         pViewMenu->addAction(pNewton);
         pViewMenu->addAction(pJuliaQuat);
-        pViewMenu->addAction(pRM);
         pViewMenu->addAction(pShadow);
         pViewMenu->addAction(pFlight);
         pViewMenu->addAction(pHydrogen);
@@ -180,7 +172,6 @@ void MainFrame::createMenu()
         pViewMenu->addAction(pBoids);
         pViewMenu->addAction(pBoidsGPU);
         pViewMenu->addAction(pFlow);
-        pViewMenu->addAction(pOther);
     }
 
     QMenu *pOptionsMenu =  menuBar()->addMenu("Settings");
@@ -463,15 +454,6 @@ void MainFrame::onJuliaQuat()
 }
 
 
-void MainFrame::onRM()
-{
-    if(m_pCentralWt) delete m_pCentralWt;
-    m_pCentralWt = new gl2dRM;
-    setCentralWidget(m_pCentralWt);
-    update();
-}
-
-
 void MainFrame::onShadow()
 {
     if(m_pCentralWt) delete m_pCentralWt;
@@ -587,11 +569,6 @@ void MainFrame::onBoidsGPU()
     m_pCentralWt = new gl3dBoids2;
     setCentralWidget(m_pCentralWt);
     update();
-}
-
-
-void MainFrame::onOther()
-{
 }
 
 

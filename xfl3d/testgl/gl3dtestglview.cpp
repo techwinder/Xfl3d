@@ -27,7 +27,7 @@ void gl3dTestGLView::glRenderView()
     float dist = 1.0f;
     float satrad = 0.15f;
 
-    QMatrix4x4 modelmat;
+//    QMatrix4x4 modelmat;
 //    modelmat.scale(0.25f, 0.25f, 0.25f);
     QMatrix4x4 vmMat(m_matView*m_matModel);
     QMatrix4x4 pvmMat(m_matProj*vmMat);
@@ -45,10 +45,15 @@ void gl3dTestGLView::glRenderView()
     }
     m_shadLine.release();
 
+//    m_bAxes = false;
+
     paintIcoSphere(Vector3d(), 0.25, QColor(205, 155, 133), true, true);
 
-    paintIcosahedron({dist*cos(1*2*PI/3+3.0*PI/7.0), dist*sin(1*2*PI/3+3.0*PI/7.0), 0.0f}, satrad,
-                     Qt::darkCyan,   W3dPrefs::s_OutlineStyle, true, true);
+    LineStyle ls(true, Line::SOLID, 3.0, Qt::black, Line::NOSYMBOL);
+    paintIcosahedron({dist*cos(1*2*PI/3+3.0*PI/7.0), dist*sin(1*2*PI/3+3.0*PI/7.0), 0.0f}, satrad, Qt::darkCyan, ls, true, true);
+
+    paintIcosahedron({dist*cos(1*2*PI/3+3.0*PI/7.0), dist*sin(1*2*PI/3+3.0*PI/7.0), 0.0f}, satrad, Qt::darkCyan,
+                     W3dPrefs::s_OutlineStyle, true, true);
     paintIcosahedron({dist*cos(2*2*PI/3+3.0*PI/7.0), dist*sin(2*2*PI/3+3.0*PI/7.0), 0.0f}, satrad,
                      Qt::darkYellow, W3dPrefs::s_OutlineStyle, true, true);
     paintIcosahedron({dist*cos(3*2*PI/3+3.0*PI/7.0), dist*sin(3*2*PI/3+3.0*PI/7.0), 0.0f}, satrad,

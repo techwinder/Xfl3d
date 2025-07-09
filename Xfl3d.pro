@@ -36,13 +36,13 @@ linux-g++ {
     # VARIABLES
     isEmpty(PREFIX):PREFIX = /usr/local
     BINDIR = $$PREFIX/bin
-    DATADIR = $$PREFIX/share/flow5
+    DATADIR = $$PREFIX/share/xfl3d
 
     desktop.path = $$DATADIR
     desktop.files += meta/linux/$${TARGET}.desktop
 
     icon128.path = $$DATADIR
-    icon128.files += meta/res/$${TARGET}.png
+    icon128.files += resources/icons/$${TARGET}.png
 
     target.path = $$BINDIR
 

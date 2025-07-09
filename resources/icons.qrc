@@ -19,5 +19,6 @@
         <file>icons/empty.png</file>
         <file>icons/light.png</file>
         <file>icons/reset3dscale.png</file>
+        <file>icons/Xfl3d.png</file>
     </qresource>
 </RCC>

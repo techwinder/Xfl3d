@@ -36,7 +36,6 @@ class MainFrame : public QMainWindow
         void onFractal();
         void onNewton();
         void onJuliaQuat();
-        void onRM();
         void onShadow();
         void onFlight();
         void onHydrogen();
@@ -51,7 +50,6 @@ class MainFrame : public QMainWindow
         void onFlow();
         void onSpace();
 
-        void onOther();
 
     private:
 
