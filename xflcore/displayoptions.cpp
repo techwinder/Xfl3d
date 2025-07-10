@@ -14,8 +14,8 @@
 #include "displayoptions.h"
 
 
-QColor DisplayOptions::g_BackgroundColor2d(QColor(237, 237, 237));
-QColor DisplayOptions::g_TextColor(Qt::black);
+QColor DisplayOptions::g_BackgroundColor2d(3,7,13);
+QColor DisplayOptions::g_TextColor(QColor(237, 237, 237));
 
 
 FontStruct DisplayOptions::g_TextFontStruct;

@@ -128,7 +128,7 @@ void MainFrame::createMenu()
         QAction *pBoidsGPU   = new QAction("Boids (GPU)", this);
         pBoidsGPU->setShortcut(Qt::Key_F12);
 
-        QAction *pFlow      = new QAction("Flow", this);
+        QAction *pFlow      = new QAction("Vortex flow", this);
         pFlow->setShortcut(QKeySequence(Qt::CTRL | Qt::Key_F));
 
 
