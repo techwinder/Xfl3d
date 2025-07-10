@@ -88,6 +88,10 @@ gl3dLorenz::gl3dLorenz(QWidget *pParent) : gl3dTestGLView (pParent)
                     m_plbStyle  = new LineBtn(s_ls);
                     connect(m_plbStyle, SIGNAL(clickedLB(LineStyle)), SLOT(onLineStyle(LineStyle)));
 
+                    QCheckBox *pchAxes = new QCheckBox("Axes");
+                    pchAxes->setChecked(true);
+                    connect(pchAxes, SIGNAL(clicked(bool)), SLOT(onAxes(bool)));
+
                     QLabel *pLabSigma     = new QLabel(SIGMACHAR+"=");
                     QLabel *pLabRho       = new QLabel(RHOCHAR+"=");
                     QLabel *pLabBeta      = new QLabel(BETACHAR+"=");
@@ -108,7 +112,7 @@ gl3dLorenz::gl3dLorenz(QWidget *pParent) : gl3dTestGLView (pParent)
                     pParamsLayout->addWidget(pLabdt,         7, 1, Qt::AlignRight | Qt::AlignVCenter);
                     pParamsLayout->addWidget(pLabMaxPts,     8, 1, Qt::AlignRight | Qt::AlignVCenter);
                     pParamsLayout->addWidget(pLabLineStyle,  9, 1, Qt::AlignRight | Qt::AlignVCenter);
-                    pParamsLayout->addWidget(pLabRefresh,   10, 1, Qt::AlignRight | Qt::AlignVCenter);
+                    pParamsLayout->addWidget(pLabRefresh,   11, 1, Qt::AlignRight | Qt::AlignVCenter);
 
                     pParamsLayout->addWidget(m_pdeSigma,       1, 2);
                     pParamsLayout->addWidget(m_pdeRho,         2, 2);
@@ -119,7 +123,9 @@ gl3dLorenz::gl3dLorenz(QWidget *pParent) : gl3dTestGLView (pParent)
                     pParamsLayout->addWidget(m_pdeDt,          7, 2);
                     pParamsLayout->addWidget(m_pieMaxPts,      8, 2);
                     pParamsLayout->addWidget(m_plbStyle,       9, 2);
-                    pParamsLayout->addWidget(m_pieIntervalms, 10, 2);
+                    pParamsLayout->addWidget(pchAxes,          10,1,1,2);
+
+                    pParamsLayout->addWidget(m_pieIntervalms, 11, 2);
                 }
                 pParamsForm->setLayout(pParamsLayout);
             }

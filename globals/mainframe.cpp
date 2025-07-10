@@ -241,7 +241,13 @@ void MainFrame::closeEvent(QCloseEvent *pEvent)
 
 void MainFrame::loadSettings()
 {
-    QSettings settings(QSettings::NativeFormat,QSettings::UserScope,"Xfl3d", "Xfl3d");
+#if defined Q_OS_MAC
+    QSettings settings(QSettings::IniFormat,QSettings::UserScope,"Xfl3d", );
+#elif defined Q_OS_LINUX
+    QSettings settings(QSettings::NativeFormat,QSettings::UserScope,"Xfl3d");
+#else
+    QSettings settings(QSettings::IniFormat,QSettings::UserScope,"Xfl3d");
+#endif
     if(QFile(settings.fileName()).exists())
     {
         settings.beginGroup("Mainframe");
@@ -277,7 +283,14 @@ void MainFrame::loadSettings()
 
 void MainFrame::saveSettings()
 {
-    QSettings settings(QSettings::NativeFormat,QSettings::UserScope,"Xfl3d", "Xfl3d");
+#if defined Q_OS_MAC
+    QSettings settings(QSettings::IniFormat,QSettings::UserScope,"Xfl3d", );
+#elif defined Q_OS_LINUX
+    QSettings settings(QSettings::NativeFormat,QSettings::UserScope,"Xfl3d");
+#else
+    QSettings settings(QSettings::IniFormat,QSettings::UserScope,"Xfl3d");
+#endif
+
     settings.beginGroup("Mainframe");
     {
         settings.setValue("WindowGeom", s_Geometry);

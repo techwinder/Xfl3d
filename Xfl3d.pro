@@ -49,9 +49,7 @@ linux-g++ {
     # MAKE INSTALL
     INSTALLS += target desktop icon128
 
-
 }
-
 
 
 
@@ -60,10 +58,7 @@ win32-msvc {
     CONFIG -= debug_and_release debug_and_release_target
     CONFIG += no_batch
 
-
-#    RC_ICONS = meta/win64/Xfl3d.ico
-
-
+    RC_ICONS = meta/win64/Xfl3d.ico
 
 
 #---------------- OTHER WIN LIBS -------------------

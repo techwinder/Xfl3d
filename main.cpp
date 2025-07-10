@@ -12,11 +12,11 @@
 void setOGLDefaultFormat(int version)
 {
 #if defined Q_OS_MAC
-    QSettings settings(QSettings::IniFormat,QSettings::UserScope,"flow5", "flow5");
+    QSettings settings(QSettings::IniFormat,QSettings::UserScope,"Xfl3d", );
 #elif defined Q_OS_LINUX
-    QSettings settings(QSettings::NativeFormat,QSettings::UserScope,"flow5", "flow5");
+    QSettings settings(QSettings::NativeFormat,QSettings::UserScope,"Xfl3d");
 #else
-    QSettings settings(QSettings::IniFormat,QSettings::UserScope,"flow5");
+    QSettings settings(QSettings::IniFormat,QSettings::UserScope,"Xfl3d");
 #endif
 
     // Load preferred OpenGL version
