@@ -1,58 +1,83 @@
 # Xfl3d
 Fun scientific animations using OpenGL shaders
 
+
 # Description
 Xfl3d provides a set of 2d and 3d animations based on OpenGL and the Qt framework. These animations were implemented during the development of flow5 to experiment with OpenGL features.
+
 
 ## Mandelbrot and Julia Sets
 ![image info](./meta/images/Mandelbrot.png)
 
 ![image info](./meta/images/Julia.png)
 
+
 ## Newton fractal
 ![image info](./meta/images/Newton.png)
+
 
 ## Quaternion Julia set
 ![image info](./meta/images/Quat_Julia.png)
 
+
 ## Shadow
 ![image info](./meta/images/Shadow.png)
+
 
 ## Hydrogen atom
 ![image info](./meta/images/Hydrogen.png)
 
+
 ## Flight
 ![image info](./meta/images/Flight.png)
 
-## Lorenz attractor - CPU based
+## Attractors
+
+### Lorenz CPU based
 ![image info](./meta/images/Lorenz_CPU.png)
 
-## Lorenz attractor - GPU based
+### Lorenz GPU based
 ![image info](./meta/images/Lorenz_GPU.png)
 
-## 3d attractors
+### More attractors
 ![image info](./meta/images/attractors.png)
+
 
 ## Solar system
 ![image info](./meta/images/Solarsys.png)
 
+
 ## Sagittarius A*
+[Sagittarius A*](https://en.wikipedia.org/wiki/Sagittarius_A*)
+
 ![image info](./meta/images/Sagittarius.png)
 
-## NEARGALCAT (the final frontier)
+
+## NEARGALCAT (Nearby Galaxy Catalog)
+
+[NEARGALCAT](https://heasarc.gsfc.nasa.gov/W3Browse/catalog/neargalcat.html)
+
 ![image info](./meta/images/NEARGALCAT.png)
 
-## PSO and GA optimizations
+## Particle swarm optimization (PSO) and Genetic Algorithm (GA) optimization
 ![image info](./meta/images/Optim2d.png)
 
-## Boids - CPU based
+
+## Boids
+
+[https://en.wikipedia.org/wiki/Boids](https://en.wikipedia.org/wiki/Boids)
+
+### CPU based
 ![image info](./meta/images/Boids_CPU.png)
 
-## Boids - GPU based
+### - GPU based
+
 ![image info](./meta/images/Boids_GPU.png)
+
 
 ## Vortex flow
 ![image info](./meta/images/Vortex_flow.png)
+
 
 # Usage
 ## Mouse

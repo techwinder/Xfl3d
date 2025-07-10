@@ -236,6 +236,8 @@ void MainFrame::setDefaultStaticFonts()
 
 void MainFrame::closeEvent(QCloseEvent *pEvent)
 {
+    setCentralWidget(&m_VoidWidget); // to exit active view and restore its settings (solarsys)
+
     saveSettings();
     QMainWindow::closeEvent(pEvent);
 }
