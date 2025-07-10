@@ -48,7 +48,7 @@ QString xfl::versionName(bool bFull)
 {
     QString VName;
     VName = QString::asprintf("v%d.%02d", MAJOR_VERSION, MINOR_VERSION);
-    if(bFull) VName = "flow5 "+VName;
+    if(bFull) VName = "Xfl3d "+VName;
     return VName;
 }
 

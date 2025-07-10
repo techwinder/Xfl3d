@@ -49,11 +49,8 @@ void gl3dTestGLView::glRenderView()
 
     paintIcoSphere(Vector3d(), 0.25, QColor(205, 155, 133), true, true);
 
-    LineStyle ls(true, Line::SOLID, 3.0, Qt::black, Line::NOSYMBOL);
-    paintIcosahedron({dist*cos(1*2*PI/3+3.0*PI/7.0), dist*sin(1*2*PI/3+3.0*PI/7.0), 0.0f}, satrad, Qt::darkCyan, ls, true, true);
-
-    paintIcosahedron({dist*cos(1*2*PI/3+3.0*PI/7.0), dist*sin(1*2*PI/3+3.0*PI/7.0), 0.0f}, satrad, Qt::darkCyan,
-                     W3dPrefs::s_OutlineStyle, true, true);
+    paintIcosahedron({dist*cos(1*2*PI/3+3.0*PI/7.0), dist*sin(1*2*PI/3+3.0*PI/7.0), 0.0f}, satrad,
+                     Qt::darkCyan,   W3dPrefs::s_OutlineStyle, true, true);
     paintIcosahedron({dist*cos(2*2*PI/3+3.0*PI/7.0), dist*sin(2*2*PI/3+3.0*PI/7.0), 0.0f}, satrad,
                      Qt::darkYellow, W3dPrefs::s_OutlineStyle, true, true);
     paintIcosahedron({dist*cos(3*2*PI/3+3.0*PI/7.0), dist*sin(3*2*PI/3+3.0*PI/7.0), 0.0f}, satrad,

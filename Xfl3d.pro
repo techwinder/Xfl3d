@@ -76,11 +76,13 @@ RESOURCES += \
 
 
 SOURCES += \
+    globals/aboutxfl3d.cpp \
+    globals/main.cpp \
     globals/mainframe.cpp \
     globals/prefsdlg.cpp \
-    main.cpp
 
 HEADERS += \
+    globals/aboutxfl3d.h \
     globals/mainframe.h \
     globals/prefsdlg.h
 

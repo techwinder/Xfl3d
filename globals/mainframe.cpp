@@ -10,6 +10,7 @@
 
 
 #include <globals/prefsdlg.h>
+#include <globals/aboutxfl3d.h>
 #include <xflgraph/controls/graphoptions.h>
 #include <xflcore/displayoptions.h>
 #include <xfl3d/globals/opengldlg.h>
@@ -71,12 +72,6 @@ void MainFrame::createMenu()
 {
     QMenu *pFileMenu = menuBar()->addMenu("File");
     {
-        QAction*pAboutAct = new QAction("About Xfl3d", this);
-        connect(pAboutAct, SIGNAL(triggered(bool)), SLOT(onAbout()));
-        pFileMenu->addAction(pAboutAct);
-
-        pFileMenu->addSeparator();
-
         QAction*pExitAct = new QAction("Exit", this);
         pExitAct->setShortcut(QKeySequence(Qt::CTRL | Qt::Key_Q));
         connect(pExitAct, SIGNAL(triggered(bool)), SLOT(close()));
@@ -209,6 +204,13 @@ void MainFrame::createMenu()
             pImageMenu->addAction(pClear);
             pImageMenu->addAction(pSettings);
         }
+    }
+
+    QMenu *pHelpMenu =  menuBar()->addMenu("?");
+    {
+        QAction*pAboutAct = new QAction("About Xfl3d", this);
+        connect(pAboutAct, SIGNAL(triggered(bool)), SLOT(onAbout()));
+        pHelpMenu->addAction(pAboutAct);
     }
 }
 
@@ -363,6 +365,8 @@ void MainFrame::setColorListFromFile()
 
 void MainFrame::onAbout()
 {
+    AboutXfl3d dlg(this);
+    dlg.exec();
 }
 
 
