@@ -21,7 +21,7 @@ void setOGLDefaultFormat(int version)
 
     // Load preferred OpenGL version
     // and set the default format before any 3d view is created
-    int OGLMajor = 3;
+    int OGLMajor = 4;
     int OGLMinor = 3;
     if(QFile(settings.fileName()).exists())
     {
@@ -39,11 +39,10 @@ void setOGLDefaultFormat(int version)
 
     // choose between the version passed as option if valid and the saved setting
 
-    if(OGLMajor<=2 || (OGLMajor==3 && OGLMinor<3))
+    if(OGLMajor<3 || (OGLMajor==3 && OGLMinor<3))
     {
         // Systems (may? commonly?) respond with the latest 4.x context,
         // so force deprecated functions and compatibility profile
-        // Will also force v120 style shaders in GL initialization
         gl3dView::setProfile(QSurfaceFormat::NoProfile);
         gl3dView::setDeprecatedFuncs(true);
     }

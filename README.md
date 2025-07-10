@@ -80,6 +80,17 @@ Xfl3d provides a set of 2d and 3d animations based on OpenGL and the Qt framewor
 
 
 # Usage
+
+## OpenGL
+Xfl3d requires OpenGL version 4.3+ which the application requests by default. If the animations do not display correctly, it is likely that the system does not provide support for 4.3.
+
+MacOS only supports OpenGL 4.1 and Xfl3d will not work correctly on that platform.
+
+To determine what is the version of OpenGL supported by the system, open the OpenGL settings from the Settings menu (Ctrl+Alt+O) and follow the instructions detailed on this page:
+
+[https://flow5.tech/docs/flow5_doc/UI/OpenGL.html](https://flow5.tech/docs/flow5_doc/UI/OpenGL.html)
+
+
 ## Mouse
 Pan:    left mouse button
 
